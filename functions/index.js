@@ -1,4 +1,4 @@
-// const functions = require("firebase-functions"); This is for when 
+// const functions = require("firebase-functions"); This is for when
 // we hosting it on firebase function
 const express = require("express");
 
@@ -59,7 +59,7 @@ app1.post("/", (req, res)=>{
   console.log(np);
   res.json({AllResult, success: "OK"});
 });
-app1.listen(3000,()=>{
+app1.listen(3000, ()=>{
   console.log("Server start on Port 3000");
 });
 // const api1 = functions.https.onRequest(app1); first, this and last line will

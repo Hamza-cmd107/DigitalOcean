@@ -1,11 +1,12 @@
 // const functions = require("firebase-functions"); This is for when
 // we hosting it on firebase function
 const express = require("express");
-
+const path = require("path");
 /* Express */
 const app1 = express();
+app1.set("view engine", "hbs");
 app1.get("/start", (request, response) => {
-  response.send("Hello from Express on Firebase!");
+  response.sendFile(path.join(__dirname+"/index.html"));
 });
 app1.get("/fun", (request, response) => {
   response.send("Hello for fun!");
